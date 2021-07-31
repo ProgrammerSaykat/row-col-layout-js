@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo element</title>
+
+    <style>
+        h1::before {
+            content: 'hello ';
+            color: rgb(161, 8, 8);
+        }
+
+        h1::after {
+            content: ' helo';
+            color: rgb(40, 184, 228);
+        }
+
+        .code-1::before {
+            content: open-quote;
+            font-size: 1.5em;
+        }
+
+        .code-1::after {
+            content: close-quote;
+            font-size: 1.5em;
+        }
+
+
+        .section-title {
+            display: inline-block;
+        }
+
+        .section-title::after,
+        .section-title:hover::before {
+            content: '';
+            display: block;
+            background-color: aqua;
+            height: 2px;
+            width: 100%;
+
+        }
+
+        p::after {
+            content: ' *';
+            color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hi my name is mr challu</h1>
+    <h2 class="section-title">Block queros</h2>
+
+    <blockquote class="code-1">
+        Prince, persistence and perspitat of our life
+    </blockquote>
+
+
+    <section>
+        <p>Name <input type="text"></p>
+
+    </section>
+
+
+</body>
+
+</html>
